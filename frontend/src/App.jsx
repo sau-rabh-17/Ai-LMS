@@ -15,7 +15,7 @@ import ViewCourse from './pages/ViewCourse'
 import CreateCourse from './pages/Educator/CreateCourses'
 import EditCourses from './pages/Educator/EditCourses'
 import EditLecture from './pages/Educator/EditLecture'
-import CreateLecture from './pages/Educator/createLeacture'
+import CreateLecture from './pages/Educator/CreateLeacture'
 import { ToastContainer } from "react-toastify";
 import getCurrentUser from './customHooks/getCurrentUser'
 import { useSelector } from 'react-redux'
@@ -24,7 +24,7 @@ import getCreatorCourse from './customHooks/getCreatorCourse'
 import getPublishedCourse from './customHooks/getPublishedCourse'
 import ScrollToTop from './components/ScrollToTop'
 import getAllReviews from './customHooks/getAllReviews'
-import SearchWithAi from './pages/SearchWithAI'
+import SearchWithAi from './pages/SearchWithAi'
 
 
 export const serverUrl = import.meta.env.VITE_SERVER_URL;
