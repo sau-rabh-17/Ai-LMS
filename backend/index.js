@@ -16,6 +16,7 @@ const port = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+app.set("trust proxy", 1);
 app.use(cors(
     {origin: "https://ai-lms-1-0ae3.onrender.com",
     credentials: true,}
