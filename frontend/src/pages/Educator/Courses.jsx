@@ -18,23 +18,39 @@ function Courses() {
   const { creatorCourseData } = useSelector(state => state.course)
 
   useEffect(() => {
+
     const getCreatorData = async () => {
-      try {
-        const result = await axios.get(serverUrl + "/api/course/getcreatorcourses", { withCredentials: true })
 
-        await dispatch(setCreatorCourseData(result.data))
+        try {
 
+            const result = await axios.get(
+                serverUrl + "/api/course/getcreatorcourses",
+                {
+                    withCredentials: true,
+                }
+            );
 
-        console.log(result.data)
+            dispatch(setCreatorCourseData(result.data));
 
-      } catch (error) {
-        console.log(error)
-        toast.error(error.response.data.message)
-      }
+            console.log(result.data);
 
-    }
-    getCreatorData()
-  }, [])
+        } catch (error) {
+
+            console.log(error);
+
+            console.log(error.response);
+
+            console.log(error.response?.data);
+
+            toast.error(
+                error.response?.data?.message || "Something went wrong"
+            );
+        }
+    };
+
+    getCreatorData();
+
+}, [dispatch]);
 
 
 
