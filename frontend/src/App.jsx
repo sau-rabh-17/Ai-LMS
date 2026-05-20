@@ -27,7 +27,7 @@ import getAllReviews from './customHooks/getAllReviews'
 import SearchWithAi from './pages/SearchWithAI'
 
 
-export const serverUrl = "http://localhost:8000"
+export const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 function App() {
     getCurrentUser();
